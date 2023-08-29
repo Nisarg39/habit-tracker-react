@@ -1,0 +1,45 @@
+dates card code jsx
+
+
+
+{props.dates.map(date =>(
+                <>
+                <label>{date.day}/ </label>
+                <label>{date.month}/ </label>
+                <label>{date.year}</label>
+
+                {/* display status */}
+                {date.status === "none" ?
+                    <label > status : {date.status}</label> 
+                    :
+                    <></>
+                }
+
+                {date.status === "notdone" ?
+                    <label  style={{backgroundColor: "red"}}> status : {date.status}</label> 
+                    :
+                    <></>
+                }
+
+                {date.status === "done" ?
+                    <label  style={{backgroundColor: "lightgreen"}}> status : {date.status}</label> 
+                    :
+                    <></>
+                }
+
+                {/* buttons */}
+                {date.status === "none" || date.status ==="notdone" ?    
+                    <button className="done" onClick={() => updateStatus(props.habitId,date.id, "done")} id={date.id}>Mark As Done</button>
+                    :
+                    <></>
+                }
+
+                {date.status === "done" ?    
+                    <button className= "notdone" onClick={() => updateStatus(props.habitId,date.id, 'notdone')} id={date.id}>Mark As Not Done</button>
+                    :
+                    <></>
+                }
+                            
+                <br />
+                </>
+            ))}
