@@ -5,7 +5,7 @@ A simple habit tracker built on MERN stack .
 This is the FrontEnd made using react and connected 
 with a NodeJS backend to fetch data through api calls
 
-
+Deployed - https://nisarg39.github.io/habit-tracker-react/
 
 
 
